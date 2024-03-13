@@ -2,7 +2,7 @@ import { getFrameMetadata } from '@coinbase/onchainkit/frame';
 import type { Metadata } from 'next';
 import { NEXT_PUBLIC_URL, API_URL } from './config';
 
-const searchParams = new URLSearchParams({}); // place holder
+const searchParams = new URLSearchParams({ place_holder: 'place_holder' }); // place holder
 
 const frameMetadata = getFrameMetadata({
   buttons: [
@@ -14,7 +14,7 @@ const frameMetadata = getFrameMetadata({
     },
   ],
   image: {
-    src: `${API_URL}/api/gm`,
+    src: `${API_URL}/api/gm?${searchParams}`,
     aspectRatio: '1:1',
   },
   postUrl: `${API_URL}/api/frame`,
