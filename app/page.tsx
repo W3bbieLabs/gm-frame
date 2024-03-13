@@ -14,7 +14,7 @@ const frameMetadata = getFrameMetadata({
     },
   ],
   image: {
-    src: `https://w3bbie-gm.netlify.app/api/gm`,
+    src: `${NEXT_PUBLIC_URL}/gm.png`,
     aspectRatio: '1:1',
   },
   postUrl: `${API_URL}/api/frame`,
