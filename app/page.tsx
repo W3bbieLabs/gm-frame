@@ -35,8 +35,21 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <>
-      <h1>w3bbie.xyz</h1>
-    </>
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        height: '100vh',
+
+        padding: 0,
+        margin: 0,
+      }}
+    >
+      <h1>
+        <a href="https://zora.co/collect/base:0x34572eb8bc116582170629c9a309f8ed75ac6984">gm</a>
+      </h1>
+    </div>
   );
 }
