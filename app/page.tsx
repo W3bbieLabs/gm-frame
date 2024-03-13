@@ -2,22 +2,22 @@ import { getFrameMetadata } from '@coinbase/onchainkit/frame';
 import type { Metadata } from 'next';
 import { NEXT_PUBLIC_URL, API_URL } from './config';
 
+const searchParams = new URLSearchParams({}); // place holder
+
 const frameMetadata = getFrameMetadata({
   buttons: [
     {
-      label: '👁️',
+      label: 'Mint to GM',
     },
     {
-      action: 'link',
-      label: 'w3bbie.xyz',
-      target: 'https://w3bbie.xyz',
-    }
+      label: 'Refresh',
+    },
   ],
   image: {
-    src: `${NEXT_PUBLIC_URL}/w3bbie1.jpg`,
+    src: `${API_URL}/api/gm`,
     aspectRatio: '1:1',
   },
-  postUrl: `${API_URL}/api/frame`
+  postUrl: `${API_URL}/api/frame`,
 });
 
 export const metadata: Metadata = {

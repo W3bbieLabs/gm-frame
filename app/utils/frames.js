@@ -26,3 +26,48 @@ export const basicFrame = (state) => {
         }),
     );
 }
+
+export const gmFrame = (username, address, time) => {
+    const searchParams = new URLSearchParams({ username, address, time })
+    return new NextResponse(
+        getFrameHtmlResponse({
+            image: {
+                src: `${API_URL}/api/gm?${searchParams}`,
+                aspectRatio: '1:1',
+            },
+            buttons: [
+                {
+                    label: 'Mint to GM',
+                },
+                {
+                    label: `Refresh`,
+                },
+            ],
+            postUrl: `${API_URL}/api/frame`,
+            state: {
+                time: Date.now(),
+            }
+        })
+    )
+}
+
+export const errorFrame = (error_message) => {
+    const searchParams = new URLSearchParams({ error_message })
+    return new NextResponse(
+        getFrameHtmlResponse({
+            image: {
+                src: `${API_URL}/api/error?${searchParams}`,
+                aspectRatio: '1:1',
+            },
+            buttons: [
+                {
+                    label: `Retry`,
+                },
+            ],
+            postUrl: `${API_URL}/api/frame`,
+            state: {
+                time: Date.now(),
+            }
+        })
+    )
+}
