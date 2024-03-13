@@ -17,13 +17,19 @@ const getFont = async (fontFile: string) => {
   return faster;
 };
 
+const getElapsesTime = (time: number) => {
+  let t_now = Date.now();
+  let elapsed = t_now - time;
+  const elapsedMinutes = elapsed / 1000 / 60;
+  return Math.floor(elapsedMinutes);
+};
+
 const formatTime = (time: number) => {
   const hour_min_date = new Date(time);
   let date = new Date().toLocaleDateString();
   let hour = hour_min_date.getHours();
   let _min = hour_min_date.getMinutes();
   const min = _min < 10 ? `0${_min}` : _min;
-
   return {
     date,
     hour,
@@ -72,8 +78,7 @@ const recentGMDiv = (username: string, time: number, address: string) => {
           </span>
         </p>
         <p style={{ margin: 0, padding: 0, fontSize: 25, fontFamily: 'Inter-Regular' }}>
-          {date}, {hour}:{min}
-          {ampm}
+          {date}, {getElapsesTime(time)} minutes ago
         </p>
       </div>
     </div>
@@ -109,7 +114,8 @@ let generatePastGMs = (username: string, time: number) => {
   var ampm = hour >= 12 ? 'pm' : 'am';
   hour = hour % 12;
   hour = hour ? hour : 12; // the hour '0' should be '12'
-  let date_time = `${date}, ${hour}:${min}${ampm}`;
+  let elapsed_time = getElapsesTime(time);
+  let date_time = `${date}, ${elapsed_time} mins ago`;
   return (
     <div
       style={{
@@ -126,7 +132,7 @@ let generatePastGMs = (username: string, time: number) => {
           margin: 0,
           padding: 0,
           fontFamily: 'Inter-Regular',
-          fontSize: 30,
+          fontSize: 26,
           marginBottom: 10,
         }}
       >
