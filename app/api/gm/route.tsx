@@ -4,7 +4,7 @@ const inter_font = Inter({ weight: '400', subsets: ['latin'] });
 import { API_URL, NEXT_PUBLIC_URL } from '../../config';
 import { truncateAddress } from '../../utils/contract_manager';
 import { getSortedData } from '../../utils/firebase';
-
+import { TextIngredients} from '../../components/TextIngredients';
 // App router includes @vercel/og.
 // No need to install it.
 
@@ -76,6 +76,8 @@ const recentGMDiv = (username: string, time: number, address: string) => {
           <span style={{ color: 'white', marginRight: 10, fontSize: 30, fontFamily: 'Inter-Bold' }}>
             says GM.
           </span>
+          {/* add generated content from gm_engine*/}
+          <TextIngredients/>
         </p>
         <p style={{ margin: 0, padding: 0, fontSize: 25, fontFamily: 'Inter-Regular' }}>
           {date}, {getElapsesTime(time)} minutes ago
