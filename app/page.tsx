@@ -14,7 +14,7 @@ const frameMetadata = getFrameMetadata({
     },
   ],
   image: {
-    src: `${NEXT_PUBLIC_URL}/gm.png`,
+    src: `${API_URL}/api/gm?${searchParams}`,
     aspectRatio: '1:1',
   },
   postUrl: `${API_URL}/api/frame`,

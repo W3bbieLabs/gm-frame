@@ -8,7 +8,7 @@ import { getSortedData } from '../../utils/firebase';
 // App router includes @vercel/og.
 // No need to install it.
 
-//export const runtime = 'edge'
+export const runtime = 'edge';
 
 const getFont = async (fontFile: string) => {
   let font_link = `${API_URL}/${fontFile}`;
