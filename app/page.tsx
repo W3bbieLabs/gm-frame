@@ -2,7 +2,8 @@ import { getFrameMetadata } from '@coinbase/onchainkit/frame';
 import type { Metadata } from 'next';
 import { NEXT_PUBLIC_URL, API_URL } from './config';
 
-const searchParams = new URLSearchParams({ place_holder: 'place_holder' }); // place holder
+let t = Date.now().toString();
+const searchParams = new URLSearchParams({ place_holder: 'place_holder', time: t }); // place holder
 
 const frameMetadata = getFrameMetadata({
   buttons: [
