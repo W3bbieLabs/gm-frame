@@ -32,7 +32,7 @@ export const gmFrame = (username, address, time) => {
     return new NextResponse(
         getFrameHtmlResponse({
             image: {
-                src: `${API_URL}/api/gm?${searchParams}`,
+                src: `${API_URL}/api/gmgm?${searchParams}`,
                 aspectRatio: '1:1',
             },
             buttons: [
