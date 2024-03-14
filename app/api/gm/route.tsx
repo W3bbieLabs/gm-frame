@@ -4,7 +4,7 @@ const inter_font = Inter({ weight: '400', subsets: ['latin'] });
 import { API_URL, NEXT_PUBLIC_URL } from '../../config';
 import { truncateAddress } from '../../utils/contract_manager';
 import { getSortedData } from '../../utils/firebase';
-import { TextIngredients} from '../../components/TextIngredients';
+import { TextIngredients } from '../../components/TextIngredients';
 // App router includes @vercel/og.
 // No need to install it.
 
@@ -77,7 +77,6 @@ const recentGMDiv = (username: string, time: number, address: string) => {
             says GM.
           </span>
           {/* add generated content from gm_engine*/}
-          <TextIngredients/>
         </p>
         <p style={{ margin: 0, padding: 0, fontSize: 25, fontFamily: 'Inter-Regular' }}>
           {date}, {getElapsesTime(time)} minutes ago
@@ -174,6 +173,17 @@ let pastGMs = (recent_gms: any) => {
     >
       <h1 style={{ padding: 0, marginBottom: 5 }}>Past GMs</h1>
       {listItems}
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          width: '100%',
+          marginTop: 70,
+        }}
+      >
+        <TextIngredients />
+      </div>
     </div>
   );
 };
