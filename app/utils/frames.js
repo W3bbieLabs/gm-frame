@@ -44,6 +44,11 @@ export const gmFrame = (username, address, time) => {
                 {
                     label: `Refresh`,
                 },
+                {
+                    label: 'Share',
+                    action: 'link',
+                    target: 'https://warpcast.com/~/compose?text=GM!&embeds[]=https://tx-gmbot.netlify.app',
+                },
             ],
             postUrl: `${API_URL}/api/frame`,
             state: {

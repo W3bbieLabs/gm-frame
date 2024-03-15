@@ -15,6 +15,11 @@ const frameMetadata = getFrameMetadata({
     {
       label: 'Refresh',
     },
+    {
+      label: 'Share',
+      action: 'link',
+      target: 'https://warpcast.com/~/compose?text=GM!&embeds[]=https://tx-gmbot.netlify.app',
+    },
   ],
   image: {
     src: `${API_URL}/api/gmgm?${searchParams}`,
