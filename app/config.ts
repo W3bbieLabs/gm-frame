@@ -4,8 +4,8 @@ import {
 } from 'viem';
 
 // use NODE_ENV to not have to change config based on where it's deployed https://zizzamia.xyz
-export const NEXT_PUBLIC_URL = process.env.NODE_ENV == "development" ? 'https://535b-2600-1700-9cc0-3ab0-69de-84a6-783e-ae96.ngrok-free.app' : 'https://w3bbie-gmbot.netlify.app';
-export const API_URL = process.env.NODE_ENV == "development" ? 'https://535b-2600-1700-9cc0-3ab0-69de-84a6-783e-ae96.ngrok-free.app' : 'https://w3bbie-gmbot.netlify.app';
+export const NEXT_PUBLIC_URL = process.env.NODE_ENV == "development" ? 'https://6259-2600-1700-9cc0-3ab0-a822-eb68-5c2c-df4b.ngrok-free.app/' : 'https://w3bbie-gmbot.netlify.app';
+export const API_URL = process.env.NODE_ENV == "development" ? 'https://6259-2600-1700-9cc0-3ab0-a822-eb68-5c2c-df4b.ngrok-free.app/' : 'https://w3bbie-gmbot.netlify.app';
 
 export const CHAIN = base;
 export const CONTRACT_ADDRESS = '0x34572eb8bc116582170629c9a309f8ed75ac6984';

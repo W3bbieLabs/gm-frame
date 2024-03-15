@@ -9,6 +9,11 @@ import { getData, setData, getSortedData } from '../../utils/firebase'
 
 async function getResponse(req: NextRequest): Promise<NextResponse> {
   const body: FrameRequest = await req.json();
+  //const requestHeaders = new Headers(req.headers)
+  //requestHeaders.set('max-age', '0')
+
+
+
   const { isValid, message } = await getFrameMessage(body, { neynarApiKey: 'NEYNAR_ONCHAIN_KIT' });
 
   if (!isValid) {
@@ -58,4 +63,4 @@ export async function POST(req: NextRequest): Promise<Response> {
 }
 
 export const dynamic = 'force-dynamic';
-//export const dynamic = 'auto';
+export const revalidate = 0;

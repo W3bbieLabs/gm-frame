@@ -9,6 +9,8 @@ import { TextIngredients } from '../../components/TextIngredients';
 // No need to install it.
 
 export const runtime = 'edge';
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 const getFont = async (fontFile: string) => {
   let font_link = `${API_URL}/${fontFile}`;
