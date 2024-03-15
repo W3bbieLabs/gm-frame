@@ -8,8 +8,8 @@ import { TextIngredients } from '../../components/TextIngredients';
 // App router includes @vercel/og.
 // No need to install it.
 
-export const runtime = 'edge';
-//export const dynamic = 'force-dynamic';
+//export const runtime = 'edge';
+export const dynamic = 'force-dynamic';
 //export const revalidate = 0;
 
 const getFont = async (fontFile: string) => {
