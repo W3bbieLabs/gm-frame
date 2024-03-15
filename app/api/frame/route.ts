@@ -41,13 +41,20 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
   let { username } = user_info
   let time = Date.now()
 
+  if (message?.button == 1) {
+    setData(`gms/${time}`, { username, time, address })
+  }
+
   return gmFrame(username, address, time)
+
+  //console.log(message)
 
   // User tapped refresh button
   /*
   if (message?.button == 2) {
     return gmFrame(username, address, time)
-  }*/
+  }
+  */
 
   // No verified address found
   /*
