@@ -8,7 +8,9 @@ const searchParams = new URLSearchParams({ place_holder: 'place_holder', time: t
 const frameMetadata = getFrameMetadata({
   buttons: [
     {
+      action: 'tx',
       label: 'Mint to GM',
+      target: `${NEXT_PUBLIC_URL}/api/tx`,
     },
     {
       label: 'Refresh',

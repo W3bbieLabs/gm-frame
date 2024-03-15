@@ -37,7 +37,9 @@ export const gmFrame = (username, address, time) => {
             },
             buttons: [
                 {
+                    action: 'tx',
                     label: 'Mint to GM',
+                    target: `${NEXT_PUBLIC_URL}/api/tx`,
                 },
                 {
                     label: `Refresh`,
